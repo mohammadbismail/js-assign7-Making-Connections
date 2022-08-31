@@ -1,6 +1,7 @@
 var tod = document.querySelector("#todd");
 var phil = document.querySelector("#phil");
 var mismail = document.getElementById("ismail");
+var sign = document.querySelector(".main");
 var clicked = [1, 2]; //index 0,1 for tod and phil
 var badge = document.querySelector(".vol");
 var badge2 = document.querySelector(".conn");
@@ -25,4 +26,16 @@ function remove(i) {
 console.log(mismail);
 function changeName() {
   mismail.innerText = "Mohammed Ismail";
+}
+var flag = true;
+function signOut(element) {
+  if (flag) {
+    sign.style.display = "none";
+    element.innerText = "Sign In";
+    flag = false;
+  } else if (!flag) {
+    sign.style.display = "flex";
+    element.innerText = "Sign Out";
+    flag = true;
+  }
 }
